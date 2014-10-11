@@ -18,12 +18,18 @@ var menuState = {
         startLabelDown.anchor.setTo(0.5, 0.5);
         game.add.tween(startLabelDown).to({alpha: 0}, 500).to({alpha: 1}, 1000).loop().start();
 
-		// Start the game when the up arrow key is pressed
+		// Start the according to the key pressed
 		var downKey = game.input.keyboard.addKey(Phaser.Keyboard.DOWN);
-        downKey.onDown.addOnce(this.start, this);
+        downKey.onDown.addOnce(this.startplayWithOutRecycling, this);
+        var upKey = game.input.keyboard.addKey(Phaser.Keyboard.UP);
+        upKey.onDown.addOnce(this.startplayWithRecycling, this);
 	},
 
-	start: function() {
-		game.state.start('playWithoutRecycling');
-	}
+	startplayWithOutRecycling: function() {
+		game.state.start('playWithOutRecycling');
+	},
+
+    startplayWithRecycling: function() {
+        game.state.start('playWithRecycling');
+    }
 };

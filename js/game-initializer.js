@@ -10,7 +10,8 @@ game.global = {
 game.state.add('boot', bootState);
 game.state.add('load', loadState);
 game.state.add('menu', menuState);
-game.state.add('playWithoutRecycling', playWithoutRecyclingState);
+game.state.add('playWithOutRecycling', playWithOutRecyclingState);
+game.state.add('playWithRecycling', playWithRecyclingState);
 
 // Start the "boot" state
 game.state.start('boot');
