@@ -19,7 +19,7 @@ var playWithRecyclingState = {
         // Create the square group
         this.squares = game.add.group();
         this.squares.enableBody = true;
-        this.squares.createMultiple(50, 'blackSquare');
+       this.squares.createMultiple(50, 'blackSquare');
 
         /* add a timer to generate black squares
          ******************************************************/
@@ -42,12 +42,12 @@ var playWithRecyclingState = {
             // Retrieve a square from the squares group
             var square;
             square = this.squares.getFirstDead();
-            console.log(square);
             if (!square) {
                 return;
             }
 
             this.squaresGenerated++;
+
 
             // Init the square
             square.anchor.setTo(0, 0.5);
